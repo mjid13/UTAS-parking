@@ -1,0 +1,47 @@
+{% extends 'index.html' %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+<!-- <div class="container my-4 center-div">
+
+</div> -->
+
+
+<section class="section-sm">
+
+    {% for category, products_in_category in categorized_products.items() %}
+    <div class="container">
+
+
+
+        <h3 class="h5 section-title">{{ category }}</h3>
+        <div class="row">
+            {% for product in products_in_category %}
+
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card border-0 rounded-0 text-center shadow-none overflow-hidden">
+                    <a href="{{ url_for('payment') }}">
+
+                        <img src="{{ url_for('static', filename='img/products/' + product['image']) }}"
+                            alt="{{ product['name'] }}" class="card-img-top rounded-0"
+                            style="width: 240px; height: 200px;">
+                        <div class="card-body">
+                            <h4 class="text-uppercase mb-3">{{ product['name'] }}</h4>
+
+                            <p class="h4 text-muted font-weight-light mb-3">${{ product['price'] }}</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            {% endfor %}
+        </div>
+
+    </div>
+    {% endfor %}
+
+</section>
+
+{% endblock %}

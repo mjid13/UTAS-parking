@@ -1,0 +1,47 @@
+{% extends 'index.html' %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+
+
+<div class="container my-4 center-div">
+    {% if success_message %}
+    <div class="alert alert-success" role="alert">
+        {{ success_message }}
+    </div>
+    {% elif error_message %}
+    <div class="alert alert-danger" role="alert">
+        {{ error_message }}
+    </div>
+    {% endif %}
+    <div class="d-flex justify-content-center" style="width: 100%;">
+
+        <form method="post" action="/booking" id="contactForm" name="sentMessage">
+
+            <div class="form-group">
+
+                <input type="text" class="form-control" name="name" id="name" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputDate">Date</label>
+                    <input type="date" class="form-control" name="date" id="date" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputTime">Time</label>
+                    <input type="time" class="form-control" name="time" id="time" required>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-outline-primary btn-lg btn-block" id="sendMessageButton">Book a Parking
+                Space</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'index.html' %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+
+
+<form>
+
+    <div class="container">
+        <h2> Send Feedback </h2>
+        <main>
+            <fieldset style="border:outset 2px #33cccc">
+                insert file:<input type="file"><br><br>
+                Give us your feedback:<br>
+                <textarea rows="10" cols="45" placeholder=" Inter Your Feedback">
+</textarea>
+            </fieldset>
+            <br>
+            <input type="Submit" value="Send">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="reset" value="Delete">
+            <br>
+            <br>
+
+        </main>
+
+    </div>
+</form>
+
+
+<form>
+
+    <div class="container">
+        <main>
+            <br>
+            <h1> Or Contact Us </h1>
+
+            <h3>
+                Call us: <br>
+                <br>
+                &phone;7000001<br>
+                <br>
+                <br>
+            </h3>
+
+
+        </main>
+
+        <br>
+    </div>
+</form>
+
+{% endblock %}

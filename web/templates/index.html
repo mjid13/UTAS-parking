@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Stylish Boutique</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}" />
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="stylesheet" type="text/css"
+        href="{{ url_for('static', filename='plugins/bootstrap/bootstrap.min.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='plugins/slick/slick.css') }}" />
+
+    <link rel="stylesheet" type="text/css"
+        href="{{ url_for('static', filename='plugins/themify-icons/themify-icons.css') }}" />
+
+
+
+</head>
+<!-- <header style="border-bottom:inset 1px grey;border-right:inset 1px grey">
+    <nav style="text-align:center;font-family:Arial black;font-size:22px;color:cadetblue">
+        <a href="{{ url_for('index') }}"
+            style="color:cadetblue">Home</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <a href="{{ url_for('booking') }}"
+            style="color:cadetblue">booking</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <a href="{{ url_for('books') }}"
+            style="color:cadetblue">books</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <a href="{{ url_for('about') }}" style="color:cadetblue">About
+            us</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <a href="{{ url_for('feedback') }}" style="color:cadetblue">Contact
+            Us</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+    </nav>
+</header> -->
+
+
+<body>
+    <header class="navigation fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-white">
+                <a class="navbar-brand order-1" href="{{ url_for('index') }}">
+                    <img class="img-fluid" width="100px" src="{{ url_for('static', filename='img/logo.png') }}"
+                        alt="UTAS | Parking">
+                </a>
+                <div class="collapse navbar-collapse text-center order-lg-2 order-3" id="navigation">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('index') }}">
+                                homepage
+                            </a>
+
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="{{ url_for('booking') }}">
+                                booking
+                            </a>
+
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('books') }}">Books Shop</a>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a class="nav-link" href="{{ url_for('about') }}">about
+                            </a>
+
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('feedback') }}">feedback</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="order-2 order-lg-3 d-flex align-items-center">
+
+
+                    <button class="navbar-toggler border-0 order-1" type="button" data-toggle="collapse"
+                        data-target="#navigation">
+                        <i class="ti-menu"></i>
+                    </button>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+    <div class="banner text-center">
+        <div class="imgcontainer">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" height="20%" width="20%" alt="Avatar"
+                class="avatar">
+        </div>
+    </div>
+
+    {% block content %}
+    <div class="container my-4 center-div">
+        <form>
+
+            <div class="container">
+                <h1>Welcome to UTAS Parking </h1>
+                <br> <a href="{{ url_for('about') }}">
+                    <button type="button"><b>About us </b></button>
+                </a>
+                <br>
+                <br>
+
+                <a href="{{ url_for('feedback') }}">
+                    <button type="button"><b>Feedback </b></button>
+                </a>
+                <br>
+
+            </div>
+        </form>
+    </div>
+    {% endblock %}
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="{{ url_for('static', filename='plugins/jQuery/jquery.min.js' ) }}"></script>
+    <script src="{{ url_for('static', filename='plugins/bootstrap/bootstrap.min.js' ) }}"></script>
+    <script src="{{ url_for('static', filename='plugins/slick/slick.min.js' ) }}"></script>
+    <script src="{{ url_for('static', filename='plugins/instafeed/instafeed.min.js' ) }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js' ) }}"></script>
+
+</body>
+
+
+</html>
+
+<!-- <a href="# url_for('contact') }}">
+                <button type="button"><b>Contact us </b></button></a>
+            <br>
+            <br> -->
