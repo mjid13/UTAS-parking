@@ -97,8 +97,8 @@ def booking():
         try:
 
              # Configure your email settings
-            sender_email = 'utas.parking@gmail.com'
-            sender_password = 'ookggqtyonbqjewz'
+            sender_email = get.env("email")
+            sender_password = get.env("password")
             receiver_email = str(email)
             app.config['MAIL_SERVER']= 'smtp.gmail.com'
             app.config['MAIL_PORT']= 465
